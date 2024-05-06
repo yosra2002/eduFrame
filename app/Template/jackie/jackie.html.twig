@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ titre }}{% endblock %}
+
+{% block content %}
+<h1>{{ titre }}</h1>
+    {% for user in listeusers %}
+        {{ user.id }}-{{ user.nom }} <a href="/jackie?user_id={{ user.id }}&stateCrud=supprimer">supprimer</a> <a href="/jackie?user_id={{ user.id }}&stateCrud=update">update</a><br>
+
+    {% endfor %}
+
+
+
+        <p>Créer un nouveau nom</p>
+        <form action="/jackie" method="post">
+            <label for="nom">nom</label>
+            <input type="text" id="nom" name="nom">
+            <input type="hidden" name="stateCrud" value={{ stateCrud }}>
+            <input type="hidden"  value={{ user.id }}>
+
+           <input type="submit" value="Envoyer">
+       </form>
+{% endblock %}

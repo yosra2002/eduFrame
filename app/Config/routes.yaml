@@ -2,3 +2,19 @@ index:
     uri: /
     controller: Controller\HomeController
     httpMethod: [GET]
+hello:
+    uri: /hello
+    controller: Controller\HelloController
+    httpMethod: [GET, POST]
+welcome:
+    uri: /welcome
+    controller: Controller\WelcomeController
+    httpMethod: [GET, POST]
+jackie:
+    uri: /jackie
+    controller: Controller\JackieController
+    httpMethod: [GET, POST]
+recup--a-p-i:
+    uri: /recup--a-p-i
+    controller: Controller\Recup_APIController
+    httpMethod: [GET,POST]
